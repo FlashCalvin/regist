@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="姓名"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <EditText
+        android:id="@+id/your_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:text="請輸入姓名" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="電子郵件"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/your_name" />
+
+    <EditText
+        android:id="@+id/your_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="密碼"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/your_email" />
+
+    <EditText
+        android:id="@+id/your_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/commit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="commit"
+        android:text="確認"
+        app:layout_constraintEnd_toEndOf="@+id/your_password"
+        app:layout_constraintTop_toBottomOf="@+id/your_password" />
+
+    <ImageView
+        android:id="@+id/upper_pic"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="64dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/your_name"
+        app:layout_constraintStart_toEndOf="@+id/your_name"
+        app:layout_constraintTop_toTopOf="@+id/your_name"
+        app:layout_constraintVertical_bias="0.68"
+        app:srcCompat="@drawable/caution" />
+
+    <ImageView
+        android:id="@+id/middle_pic"
+        android:layout_width="61dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/your_email"
+        app:layout_constraintStart_toEndOf="@+id/your_email"
+        app:srcCompat="@drawable/caution" />
+
+    <ImageView
+        android:id="@+id/lower_pic"
+        android:layout_width="64dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/your_password"
+        app:layout_constraintStart_toEndOf="@+id/your_password"
+        app:layout_constraintTop_toTopOf="@+id/your_password"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/caution" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

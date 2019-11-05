@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
     }
 //    public void checkEmail{
 //        if()
+//
 
 
     public void commit(View view){
